@@ -12,9 +12,10 @@ app.get('/', function (req, res) {
 
 //Heres the general technique to reduce html code
 
-var ArticleOne={
-    title: 'Article One | Shankar kantharaj',
-    heading: 'Article One',
+var articles = {
+    'article-two': {
+    title: 'Article Two | Shankar kantharaj',
+    heading: 'Article Two',
     date: '19-aug-2017',
     content:
     `
@@ -31,7 +32,30 @@ var ArticleOne={
             
             `
     
+},
+        'article-three': {
+    title: 'Article Three | Shankar kantharaj',
+    heading: 'Article Three',
+    date: '19-aug-2017',
+    content:
+    `
+     <p>        This is the content of article This is the content of article This is the content of article This is the             content of article This is the content of article This is the content of article This is the content of article
+            </p>
+            
+            <p>
+                This is the content of article This is the content of article This is the content of article This is the content of article This is the content of article This is the content of article This is the content of article This is the content of article This is the content of article This is the content of article This is the content of article 
+            </p>
+            
+            <p>
+                This is the content of article This is the content of article This is the content of article This is the content of article This is the content of article This is the content of article This is the content of article This is the content of article This is the content of article This is the content of article This is the content of article 
+            </p>
+            
+            `
+    
+}
 };
+
+
 
 
 function CreateTemplate(data){
@@ -85,13 +109,11 @@ app.get('/article-one', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
 });
 
-app.get('/article-two', function (req, res) {
-  res.send(CreateTemplate(ArticleOne));
+app.get('/:articleName', function (req, res) {
+    var articleName=req.params.articleName;
+  res.send(CreateTemplate(articles[articleName]));
 });
 
-app.get('/article-three', function (req, res) {
-  res.send('article three requested and will be served here');
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
