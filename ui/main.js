@@ -2,4 +2,4 @@ console.log('Loaded!');
 
 
 var element=document.getElementById("main-text");
-element.InnerHTML="New Text";
+element.innerHTML="New Text";
