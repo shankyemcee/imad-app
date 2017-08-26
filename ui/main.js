@@ -59,7 +59,7 @@ sub.onlick= function() {
     console.log('Loaded!');
     //capture a list of names and render it as a list
     
-    
+    /*
     var names= ['name1','name2','name3','name4'];
     
     var list='';
@@ -69,6 +69,6 @@ sub.onlick= function() {
     console.log(list);
     var ul=document.getElementById('namelist');
     ul.innerHTML=list;
-    
+    */
 };
 
