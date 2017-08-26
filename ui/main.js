@@ -50,7 +50,7 @@ button.onclick = function(){
 };
 
 
-
+console.log('Loaded!');
 var nameInput=document.getElementById("name");
 var namee=nameInput.value;
 var Submit=document.getElementById("Submit_btn");
