@@ -53,7 +53,7 @@ button.onclick = function(){
 
 var nameInput=document.getElementById("name");console.log('Loaded!1');
 //var namee=nameInput.value;console.log(namee);
-var sub=document.getElementById('Submit');console.log(sub);
+var sub=document.getElementById('submit');console.log(sub);
 sub.onlick= function happy(){
     //make a request to the server and send the name
     console.log('Loaded!');
