@@ -51,9 +51,9 @@ button.onclick = function(){
 
  console.log('Loaded!');
 
-var nameInput=document.getElementById("name");
-var namee=nameInput.value;
-var sub=document.getElementById('Submit_btn');
+var nameInput=document.getElementById("name");console.log('Loaded!1');
+var namee=nameInput.value;console.log(namee);
+var sub=document.getElementById('Submit_btn');console.log('Loaded!'3);
 sub.onlick= function() {
     //make a request to the server and send the name
     console.log('Loaded!');
