@@ -64,7 +64,7 @@ Submit.onlick=function(){
     
     var list='';
     for(var i=0;i<names.length;i++){
-        list+='<li>' + names[i] + '</li>';
+        list+='<li>' + names[i] + '</li>';Console.log(list);
     }
     
     var ul=document.getElementById('namelist');
