@@ -54,7 +54,7 @@ button.onclick = function(){
 var nameInput=document.getElementById("name");console.log('Loaded!1');
 //var namee=nameInput.value;console.log(namee);
 var sub=document.getElementById('Submit_btn');console.log(sub);
-sub.onlick= function happy () {
+sub.onlick= function () {
     //make a request to the server and send the name
     console.log('Loaded!');
     //capture a list of names and render it as a list
