@@ -51,13 +51,13 @@ button.onclick = function(){
 
 
 
-/*
-var namee=nameInput.value;console.log(namee);
-var sub=document.getElementById('Submit_btn');console.log(sub);
+
+
+var sub=document.getElementById('Submit_btn');
 sub.onlick= function () {
-    make a request to the server and send the name
+  //  make a request to the server and send the name
     console.log('Loaded!');
-    capture a list of names and render it as a list
+   //    capture a list of names and render it as a list
     
     
     var names= ['name1','name2','name3','name4'];
@@ -70,12 +70,12 @@ sub.onlick= function () {
     var nameInput=document.getElementById("name");console.log('Loaded!1');
     var ul=document.getElementById('namelist');
     ul.innerHTML=list;
-    
+    var namee=nameInput.value;
 };
 
 
-*/
 
+/*
 
 var submit=document.getElementById('Submit_btn');
 submit.onclick =function(){
@@ -99,7 +99,7 @@ submit.onclick =function(){
             }
         }
     };
-    
+  */  
     var nameInput=document.getElementById('name');
     var name=nameInput.value;
     request.open('GET','http://shankyemcee.imad.hasura-app.io/Submit_name?name=' + name,true);
