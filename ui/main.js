@@ -49,17 +49,17 @@ button.onclick = function(){
     
 };
 
- console.log('Loaded!');
 
-var nameInput=document.getElementById("name");console.log('Loaded!1');
-//var namee=nameInput.value;console.log(namee);
+
+/*
+var namee=nameInput.value;console.log(namee);
 var sub=document.getElementById('Submit_btn');console.log(sub);
 sub.onlick= function () {
-    //make a request to the server and send the name
+    make a request to the server and send the name
     console.log('Loaded!');
-    //capture a list of names and render it as a list
+    capture a list of names and render it as a list
     
-    /*
+    
     var names= ['name1','name2','name3','name4'];
     
     var list='';
@@ -67,8 +67,43 @@ sub.onlick= function () {
         list+='<li>' + names[i] + '</li>';
     }
     console.log(list);
+    var nameInput=document.getElementById("name");console.log('Loaded!1');
     var ul=document.getElementById('namelist');
     ul.innerHTML=list;
-    */
+    
 };
+
+
+*/
+
+
+var submit=document.getElementById('Submit_btn');
+submit.onclick =function(){
+   
+    var request=new XMLHttpRequest();
+    
+    //capture the response and store in a variable
+    request.onreadystatechange = function(){
+        if(request.readyState===XMLHttpRequest.DONE ){
+            //take some action
+            if(request.status===200){
+                var names=request.responseText;
+                name=JSON.parse(names);
+                var list='';
+                for(var i=0;i<names.length;i++)
+                {
+                    lisst+='<li>' + names[i] + '</li>';
+                }
+                var ul=document.getElementById('namelist');
+                ul.innerHTML=list;
+            }
+        }
+    };
+    
+    var nameInput=document.getELementById('name');
+    var name=nameInput.value;
+    request.open('GET','http://shankyemcee.imad.hasura-app.io/Submit_name?name=' + name,true);
+    request.send(null);
+};
+
 
