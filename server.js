@@ -106,7 +106,7 @@ return htmltemplate;
 }
 
 var names=[];
-app.get('/Submit-name',function(req,res){
+app.get('/Submit_name',function(req,res){
     var name=req.query.name;
     
     names.push(name);
