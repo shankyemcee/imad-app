@@ -100,7 +100,7 @@ submit.onclick =function(){
         }
     };
     
-    var nameInput=document.getELementById('name');
+    var nameInput=document.getElementById('name');
     var name=nameInput.value;
     request.open('GET','http://shankyemcee.imad.hasura-app.io/Submit_name?name=' + name,true);
     request.send(null);
