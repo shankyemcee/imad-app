@@ -143,9 +143,10 @@ app.get('/Submit_name',function(req,res){
 
 app.get('/articles/:articleName', function (req, res) {
 
-
+//to hack one can write select * from article where title='';DELETE WHERE a='asdf'
 //select * from article where title='article-one'
-pool.query("SELECT * FROM dept WHERE title='"+ req.params.articleName + "'", function(err,result){
+//pool.query("SELECT * FROM dept WHERE title='"+ req.params.articleName + "'", function(err,result){
+pool.query("SELECT * FROM dept WHERE title=$1" + [req.params.articleName], function(err,result){
     if(err){
         res.status(500).send(err.toString());
     }
