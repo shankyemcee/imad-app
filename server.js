@@ -141,6 +141,28 @@ app.get('/Submit_name',function(req,res){
     res.send(JSON.stringify(names));
 });
 
+app.get('/:articleName', function (req, res) {
+
+
+//select * from article where title='article-one'
+pool.query("SELECT * FROM Article WHERE title='"+ req.params.articleName + "'", function(err,result){
+    if(err){
+        res.status(500).send(err.toString());
+    }
+    else{
+        if(result.rows.length===0){
+            res.status(404).send('Article not found');
+        }
+        else{
+            var articleData=result.rows[0];
+            res.send(CreateTemplate(articleData));
+            
+        }
+    }
+});
+  
+});
+
 app.get('/article-one', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
 });
@@ -152,6 +174,9 @@ app.get('/:articleName', function (req, res) {
 });
 
 */
+
+
+
 
 app.get('/test-db', function(req,res){
    //submit request
