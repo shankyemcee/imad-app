@@ -145,7 +145,7 @@ app.get('/articles/:articleName', function (req, res) {
 
 
 //select * from article where title='article-one'
-pool.query("SELECT * FROM dept WHERE title='"+ req.params.articleName + "'", function(err,result){
+pool.query("SELECT * FROM dept WHERE title= "+ req.params.articleName + , function(err,result){
     if(err){
         res.status(500).send(err.toString());
     }
@@ -155,8 +155,8 @@ pool.query("SELECT * FROM dept WHERE title='"+ req.params.articleName + "'", fun
         }
         else{
             var articleData=result.rows[0];
-           // res.send(CreateTemplate(articleData));
-             res.send(JSON.stringify(articleData.title));
+            res.send(CreateTemplate(articleData));
+            
         }
     }
 });
