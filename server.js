@@ -1,6 +1,16 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var Pool=require('pg').Pool;
+
+var config={
+    user:'shankyemcee',
+    database:'shankyemcee',
+    host:'db.imad.hasura-app.io',
+    port:'5432',
+    password:process.env.DB_PASSWORD
+};
+
 
 var app = express();
 app.use(morgan('combined'));
@@ -8,6 +18,24 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
+var pool=new Pool(config);
+app.get('/test-db', function(req,res){
+    pool.query('SELECT * FROM test', function(req,res){
+        
+        if(err)
+        {
+            res.status(500).send(err.toString());
+        }
+        else
+        {
+            res.send(JSON.stringify(result));
+        }
+    });
+});
+
+
+
 
 
 //Heres the general technique to reduce html code
@@ -124,6 +152,13 @@ app.get('/:articleName', function (req, res) {
 });
 
 */
+
+app.get('/test-db', function(req,res){
+   //submit request
+   //receive response
+});
+
+
 var counter=0;
 app.get('/counter', function(req,res){
     counter=counter+1;
