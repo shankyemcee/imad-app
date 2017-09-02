@@ -155,8 +155,8 @@ pool.query("SELECT * FROM dept WHERE title='"+ req.params.articleName + "'", fun
         }
         else{
             var articleData=result.rows[0];
-            res.send(CreateTemplate(articleData));
-            
+           // res.send(CreateTemplate(articleData));
+             res.send(articleData.toString());
         }
     }
 });
