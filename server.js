@@ -118,7 +118,7 @@ var htmltemplate=`<html>
         
         
         <div>
-          ${date}
+          ${date.toDateString()}
         </div>
         <div>
             ${content}
