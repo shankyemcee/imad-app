@@ -51,7 +51,7 @@ button.onclick = function(){
 
 
 
-/*
+
 
 var sub=document.getElementById('Submit_btn');
 sub.onlick= function () {
@@ -73,7 +73,7 @@ sub.onlick= function () {
     var namee=nameInput.value;
 };
 
-*/
+
 /*
 
 
