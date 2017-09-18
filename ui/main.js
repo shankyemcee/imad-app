@@ -74,7 +74,7 @@ sub.onlick= function () {
 };
 
 */
-
+/*
 
 
 var submit=document.getElementById('Submit_btn');
@@ -106,7 +106,7 @@ submit.onclick =function(){
     request.send(null);
 };
 
-
+*/
 
 //this is for login credentials
 
