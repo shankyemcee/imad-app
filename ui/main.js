@@ -110,7 +110,7 @@ submit.onclick =function(){
 
 //this is for login credentials
 
-
+/*
 var mooo =document.getElementById('cred_but');
 mooo.onclick = function() {
    
@@ -142,4 +142,10 @@ mooo.onclick = function() {
     request.send(JSON.stringify({username:username,password:password}));
 };
 
+*/
 
+
+var mooo =document.getElementById('cred_but');
+mooo.onclick = function() {
+    alert('okay');
+}
