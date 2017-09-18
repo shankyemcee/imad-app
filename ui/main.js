@@ -107,3 +107,39 @@ submit.onclick =function(){
 };
 
 
+
+//this is for login credentials
+
+
+var subm=document.getElementById('cred_but');
+subm.onclick =function(){
+   
+    var request=new XMLHttpRequest();
+    
+    //capture the response and store in a variable
+    request.onreadystatechange = function(){
+        if(request.readyState===XMLHttpRequest.DONE ){
+            //take some action
+            if(request.status===200){
+               alert('Logged in successfully');
+            }else if(request.status==403){
+                 alert('username/password invalid');
+                
+            }else if(request.status==500){
+                 alert('something went wrong on the server');
+                
+            }
+            
+        }
+    };
+  
+    var username=document.getElementById('username'); 
+    var password=document.getElementById('password');
+    console.log(username);
+    console.log(password);
+    request.open('POST','http://shankyemcee.imad.hasura-app.io/login' + name,true);
+    request.setRequestHeader('Content-Type','application/json');
+    request.send(JSON.stringify({username:username,password:password}));
+};
+
+
