@@ -144,8 +144,9 @@ mooo.onclick = function() {
 
 */
 
-
+/*
 var mooo =document.getElementById('cred_but');
 mooo.onclick = function() {
     alert('okay');
 }
+*/
