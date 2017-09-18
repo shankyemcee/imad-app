@@ -111,8 +111,8 @@ submit.onclick =function(){
 //this is for login credentials
 
 
-var subm=document.getElementById("cred_but");
-subm.onclick =function(){
+var mooo =document.getElementById("cred_but");
+mooo.onclick =function(){
    
     var request=new XMLHttpRequest();
     
