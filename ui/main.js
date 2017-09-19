@@ -77,7 +77,7 @@ sub.onlick= function () {
 
 
 
-var submit=document.getElementById('Submit_btnn');
+var submit=document.getElementById('Submit_btn');
 submit.onclick =function(){
    
     var request=new XMLHttpRequest();
