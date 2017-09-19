@@ -75,7 +75,7 @@ sub.onlick= function () {
 
 */
 
-
+/*
 
 var submit=document.getElementById('Submit_btn');
 submit.onclick =function(){
@@ -106,12 +106,12 @@ submit.onclick =function(){
     request.send(null);
 };
 
-
+*/
 
 //this is for login credentials
 
 
-var mooo =document.getElementById('credbut');
+var mooo =document.getElementById('Submit_btn');
 mooo.onclick = function() {
    
     var request=new XMLHttpRequest();
