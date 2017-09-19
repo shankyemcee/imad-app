@@ -110,7 +110,7 @@ submit.onclick =function(){
 
 //this is for login credentials
 
-
+/*
 var mooo =document.getElementById('cred_but');
 mooo.onclick = function() {
    
@@ -144,3 +144,4 @@ mooo.onclick = function() {
 
 
 
+*/
